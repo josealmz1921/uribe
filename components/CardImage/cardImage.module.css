@@ -1,0 +1,123 @@
+.root {
+    max-height: 90vh;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.image img {
+    object-fit: cover;
+    object-position: center -5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    width: 30rem;
+    padding: 1rem;
+    border-bottom: 4px solid rgb(200, 186, 185);
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3rem;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.left div {
+    margin-left: 6rem;
+}
+
+.right div {
+    margin-right: 6rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.containerText {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    padding: 0 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content p:first-of-type {
+    font-family: 'Open Sans';
+    font-size: 4rem;
+    color: gray;
+    padding: 0;
+    margin: 0;
+}
+
+.content p:last-of-type {
+    font-family: 'Libre Vodoni';
+    font-size: 4rem;
+    color: gray;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: .5rem;
+}
+
+@media only screen and (max-width:768px) {
+
+    .root {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content>div p:last-of-type {
+        color: black;
+    }
+
+    .content>div p:first-of-type {
+        color: black;
+    }
+
+    .content {
+        position: absolute;
+        z-index: 2;
+        top: 35%;
+        left: auto;
+        width: 30rem;
+        padding: 1rem;
+        border-bottom: 4px solid rgb(200, 186, 185);
+        background-color: rgba(200, 186, 185, .4);
+    }
+}
+
+@media only screen and (max-width:550px){
+    .right, .left{
+       display: flex;
+       justify-content: center;
+    }
+    .right div, .left div{
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,95 @@
+.root{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    height: 10vh;
+    background: none;
+    position: relative;
+}
+
+.image{
+    width: 20%;
+}
+
+.image img{
+    width: 100%;
+    object-fit: contain;
+    height: 9vh;
+    object-position: left;
+    cursor: pointer;
+}
+
+.root nav{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: .5rem;
+}
+
+.root nav a{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Libre Vodoni';
+    font-weight: bold;
+    font-size: 1.8vw;
+    border-left:1px solid rgb(96, 95, 95);
+    border-right:1px solid rgb(96, 95, 95);
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.root nav a:after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    transition: ease all .2s;
+    margin-left: 2rem;
+    background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(131, 112, 98, 1) 100%);
+}
+
+.root nav a:hover:after{
+    width: calc(100% - 5rem);
+}
+
+.social{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+
+.buttonIconSearch{
+    border: none;
+    cursor: pointer;
+}
+
+.buttonIconSearch:first-of-type{
+    display: none;
+}
+
+.icon{
+    width: 3rem;
+    height: 3rem;
+}
+
+@media only screen and (max-width:570px){
+    .root nav{
+        display: none;
+    }
+
+    .image{
+        width: 80%;
+    }
+
+    .social{
+        width: 20%;
+    }
+
+    .buttonIconSearch:first-of-type{
+        display: block;
+    }
+
+}

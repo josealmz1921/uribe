@@ -1,0 +1,97 @@
+.root {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    /* justify-content: end; */
+    /* align-items: flex-start; */
+}
+
+.content div {
+    position: absolute;
+    top: 25%;
+    width: 23rem;
+}
+
+.content div p {
+    text-align: left;
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Libre Vodoni';
+    padding: .5rem 0;
+    color: rgb(255, 255, 255);
+    border: none;
+    text-align: center;
+}
+
+.content div p.first:after {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    content: '';
+    background: rgb(232, 221, 221);
+    background: linear-gradient(90deg, rgba(232, 221, 221, 1) 0%, rgba(82, 77, 74, 1) 100%);
+    width: 100%;
+    height: 2px;
+
+}
+
+.content div p.second {
+    background: rgb(218, 189, 187);
+    background: linear-gradient(90deg, rgba(218, 189, 187, 0.5329482134650736) 0%, rgba(249, 249, 249, 0.39289219105610995) 100%);
+    border-bottom-left-radius: 40px;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left div {
+    margin-left: 10rem;
+}
+
+.right div {
+    margin-right: 10rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1024px) {
+
+    .content div p {
+        font-size: 5vh;
+    }
+}
+
+@media only screen and (max-width:550px) {
+
+    .right,
+    .left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .right div,
+    .left div {
+        margin: 0 auto;
+    }
+}

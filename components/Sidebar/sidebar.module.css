@@ -1,0 +1,26 @@
+.root{
+    position: fixed;
+    left: -100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #fff;
+    width: 75%;
+    top: 0;
+    transition: ease all .4s;
+}
+
+.item{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.item p{
+    font-size: 2rem;
+}
+
+@media (min-width:570px){
+    .root{
+        display: none;
+    }
+}
